@@ -1,8 +1,8 @@
-POST http://localhost:5000/api/auth/register
+POST http://localhost:5000/api/auth/register/
 Content-Type: application/json
 
 {
-  "username": "1",
+  "username": "2",
   "password": "huy123"
 }
 
@@ -14,4 +14,15 @@ Content-Type: application/json
 {
   "username": "1",
   "password": "huy123"
+}
+
+###
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWQyMTJlYTgxMTQ4ZjhmNmU3MGIxMTgiLCJpYXQiOjE3MDgzNjAyMTV9.QbdPJzj-wYWGageYrM2ze_-_OP1Ini4yQpEFICdfLgE
+
+{
+  "title": "VueJs",
+  "description": "hoc react de di lam",
+  "url": "goole.com"
 }
