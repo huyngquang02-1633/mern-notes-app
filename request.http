@@ -22,7 +22,17 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWQyMTJlYTgxMTQ4ZjhmNmU3MGIxMTgiLCJpYXQiOjE3MDgzNjAyMTV9.QbdPJzj-wYWGageYrM2ze_-_OP1Ini4yQpEFICdfLgE
 
 {
-  "title": "VueJs",
+  "title": "C++",
   "description": "hoc react de di lam",
-  "url": "goole.com"
+  "url": ""
+}
+
+###
+PUT http://localhost:5000/api/posts/65d39aa94990dada7c4505a9
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWQyMTJlYTgxMTQ4ZjhmNmU3MGIxMTgiLCJpYXQiOjE3MDgzNjAyMTV9.QbdPJzj-wYWGageYrM2ze_-_OP1Ini4yQpEFICdfLgE
+
+{
+  "title": ".Net",
+  "url": "learningTime"
 }
