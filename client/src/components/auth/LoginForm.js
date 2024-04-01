@@ -9,6 +9,7 @@ const LoginForm = () => {
 	// Context
 	const { loginUser } = useContext(AuthContext)
 
+	// Local state
 	const [loginForm, setLoginForm] = useState({
 		username: '',
 		password: ''
@@ -40,7 +41,7 @@ const LoginForm = () => {
 			<Form className='my-4' onSubmit={login}>
 				<AlertMessage info={alert} />
 
-				<Form.Group>
+				<Form.Group className='mb-2'>
 					<Form.Control
 						type='text'
 						placeholder='Username'
@@ -50,7 +51,7 @@ const LoginForm = () => {
 						onChange={onChangeLoginForm}
 					/>
 				</Form.Group>
-				<Form.Group>
+				<Form.Group className='mb-4'>
 					<Form.Control
 						type='password'
 						placeholder='Password'

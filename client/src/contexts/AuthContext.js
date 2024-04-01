@@ -8,9 +8,8 @@ export const AuthContext = createContext();
 
 const AuthContextProvider = ({ children }) => {
   const [authState, dispatch] = useReducer(authReducer, {
-    authLoading: true,
     isAuthenticated: false,
-    user: null,
+    user: {},
   });
 
   // Authenticate user
@@ -27,6 +26,8 @@ const AuthContextProvider = ({ children }) => {
           payload: { isAuthenticated: true, user: response.data.user },
         });
       }
+
+      console.log(response.data.user);
     } catch (error) {
       localStorage.removeItem(LOCAL_STORAGE_TOKEN_NAME);
       setAuthToken(null);
@@ -37,7 +38,9 @@ const AuthContextProvider = ({ children }) => {
     }
   };
 
-  useEffect(() => loadUser(), []);
+  useEffect(() => {
+    loadUser();
+  }, []);
 
   // Login
   const loginUser = async (userForm) => {
